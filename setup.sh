@@ -6,7 +6,7 @@ echo "updating system packages..."
 sudo apt update && sudo apt upgrade -y
 
 echo "installing essential packages..."
-sudo apt install -y openssh-server nginx ufw fail2ban git
+sudo apt install -y openssh-server nginx ufw fail2ban git sysstat
 
 # enabling ssh service...
 sudo systemctl enable ssh
