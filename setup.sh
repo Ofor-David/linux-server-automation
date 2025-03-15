@@ -2,9 +2,6 @@
 
 set -e # exit if any command fails
 
-username="serveradmin"
-password="password123"
-
 echo "updating system packages..."
 sudo apt update && sudo apt upgrade -y
 
@@ -16,9 +13,14 @@ sudo systemctl enable ssh
 sudo systemctl start ssh
 
 # add admin user here
+echo "New Admin Username:"
+read username
+password='password123'
+
 sudo useradd -m -s /bin/bash $username
 echo "$username:$password" | sudo chpasswd
 sudo usermod -aG sudo $username
+echo "New admin($username): password set to '$password'"
 
 # Setup firewall
 echo "configuring firewall..."
