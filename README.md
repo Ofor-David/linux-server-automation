@@ -58,7 +58,7 @@ sudo ./setup.sh
    - Enables and starts the SSH service to allow remote connections.
 
 4. ****Creates a New User****
-   - Creates a new user (default: `serveradmin`) with a specified password.
+   - Creates a new user with a specified password (default: 'password123')
    - Adds the user to the sudo group.
 
 5. ****Configures the Firewall****
